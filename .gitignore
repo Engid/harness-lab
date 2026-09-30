@@ -1,0 +1,11 @@
+# secrets
+.env
+
+# python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# typescript (later)
+node_modules/
