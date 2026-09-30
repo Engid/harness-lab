@@ -9,6 +9,7 @@ cd python
 uv sync
 cp .env.example .env        # then add your TYPESAFE_API_KEY
 uv run --env-file .env pytest
+uv run --env-file .env harness-lab data/sample.txt   # ask Jev about a file
 uv run ruff check .        # lint
 uv run ruff format .       # format
 uv run ty check            # type-check
