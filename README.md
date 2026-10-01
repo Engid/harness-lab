@@ -7,4 +7,4 @@ learning code and is allowed to be rough.
 | Folder             | What                                 |
 | ------------------ | ------------------------------------ |
 | [python/](python/) | The Python version                   |
-| typescript/        | The TypeScript version (not started) |
+| [typescript/](typescript/) | The TypeScript version (Bun) |

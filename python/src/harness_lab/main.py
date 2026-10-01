@@ -54,16 +54,20 @@ def ask_jev(text: str) -> SystemOneResponse:
 
 def print_answers(response: SystemOneResponse) -> None:
     print(f"model: {response.model}")
+    
     for name, answer in response.answers.items():
         match answer:
             case NoulAnswer(noul=p):
                 print(f"{name}: yes with probability {p:.2f}")
+
             case ChoiceAnswer(choice=choice, confidence=confidence, probabilities=probs):
                 spread = ", ".join(f"{label} {p:.2f}" for label, p in probs.items())
                 print(f"{name}: {choice} (confidence {confidence:.2f}; {spread})")
+
             case ScoreAnswer(score=score, confidence=confidence, legend=legend):
                 nearest = legend[round(score)]
                 print(f"{name}: {score:.2f} ~ {nearest!r} (confidence {confidence:.2f})")
+
     usage = response.usage
     print(f"tokens: {usage.input_tokens} in, {usage.output_tokens} out")
 

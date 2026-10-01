@@ -7,5 +7,5 @@ __pycache__/
 *.pyc
 .pytest_cache/
 
-# typescript (later)
+# typescript
 node_modules/
